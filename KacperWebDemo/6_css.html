@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>first css</title>
+    <!-- inner style -->
+    <style>
+        /* 
+            selector{
+                style1:value1;
+                style2:value2;
+                style3:value3;
+            }
+
+            selector:it's a way to locate your label
+            1.tag selector:using the name of tag/label directory
+            2.id selector: locate the label with the certian id (id has to be unique)
+            3.class selector:locate the labels with the certian class
+        */
+
+        /* all the button will has text with 38px */
+        /*
+        button{
+            font-size: 38px;
+        }
+        */
+        #btn1{
+            font-size: 38px;
+        }
+
+        .red1{
+            /* background-color: cyan; */
+            /* background-color: #ff00ff; */
+            background-color: rgba(255, 255, 0, 0.3);
+            color: red;
+        }
+
+        #d1{
+            width: 1000px;
+            height: 900px;
+            /* background-color: aquamarine; */
+            background-image: url(img/20240915152801.png);
+            /* background-size: 100% 100%; */
+            /* zoom to adajust to component, the repeat to fulfill */
+            background-size: contain;    
+            background-repeat: no-repeat;
+            /* background-size: ; */
+        }
+    </style>
+
+
+    <!-- outside style -->
+</head>
+<body>
+    <!--
+        web page -> building house
+        html->structures
+        css->decoration
+        javascript->functional
+    -->
+    <button>normal button</button>
+    <!-- Embedded style -->
+    <button style="background-color:pink;color:green;height: 60px;">button with pink background,green text</button>
+    <button id="btn1">the font size is 38 px</button>
+
+    <h1 class="red1">I'm red text</h1>
+    <h2 class="red1">I'm red text</h2>
+    <p class="red1">I'm red text</p>
+
+    <h1>I'm no color text</h1>
+
+    <div id="d1"></div>
+</body>
+</html>
+
