@@ -1,0 +1,21 @@
+.red{
+    color: red;
+}
+.yellow{
+    background-color: yellow;
+}
+
+#styleFont1{
+    color: brown;
+    font-size: 40px;
+    font-weight: bolder;
+    /* font-style: italic; */
+    font-family: Comic Sans MS;
+    line-height: 80px;
+}
+
+#styleFont2{
+    width: 500px;
+    background-color: bisque;
+    text-align: center;
+}

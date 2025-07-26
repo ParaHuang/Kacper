@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- comment:ctrl+/ -->
+    <!-- inner style -->
+    <!--      
+    <style>
+        .red{
+            color: red;
+        }
+        .yellow{
+            background-color: yellow;
+        }
+    </style> -->
+
+    <!-- outside style -->
+    <!-- import a style sheet -->
+    <!-- <style>@import url(css/7.css);</style> -->
+    <!--link a style sheet into this file, link also can include js file into here-->
+    <link href="css/7.css" rel="stylesheet"/>
+    
+</head>
+<body>
+    
+    <!-- link -->
+    <a href="http://www.baidu.com">the text you want to display</a><br/>
+    <a href="2.html">click me open a local page</a>
+    <div>this is normal font</div>
+    <div class="red">this is red font</div>
+    <div class="red yellow">this is red font, with yellow background</div>
+    <div class="yellow">with yellow background</div>
+
+    <h1>big title</h1>
+    <p>paragraph</p>
+
+    <!-- div:division,take the whole horizontal space, a label to split your content without giving any other style -->
+    <div>hahah</div>
+    <div id="styleFont1">
+        Notice the patterned behavior that can be subdivided 
+        • factorial(n) = n! = n * factorial(n - 1) 
+        • factorial(3) = 3! = 3 * factorial(2) = 3 * 2 * factorial(1) = 3 * 2 * 1 = 6 
+        • This means the base case is when n = 1. (Or if we don’t want to error handle, n < 2). Notice 
+        that this can be made to be a boolean named constant, and even the stopping point could 
+        be as well. 
+        • The update comes from the number decreasing as it is passed into future factorial calls 
+        (recursive step).
+    </div>
+    <div id="styleFont2">the text in the middle of div</div>
+    <!-- span:a label to split your content without giving any other style or change a line-->
+    <span class="red">content1</span>
+    <span class="yellow">content2</span>
+    <span>content3</span>
+</body>
+</html>
