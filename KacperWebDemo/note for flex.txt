@@ -1,0 +1,11 @@
+Main axis
+cross axis
+
+director:the attribute to make sure about what main axis is (values:  row  or  column)
+
+justify-content: the align way on the main axis
+values are :  flex-start,flext-end,center, space-betwen,space-around,space-evenly
+
+
+align-items: the align way on the cross axis
+values are : strentch , flex-start, flex-end, center

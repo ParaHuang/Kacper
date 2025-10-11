@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* clear default style */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #d1{
+            width: 100px;
+            height: 100px;
+            background: yellowgreen;
+            position: fixed;    /*relative to window*/
+            /* top: 100px; */
+            bottom: 0;
+            right: 0;
+        }
+
+        #d2{
+            width: 100px;
+            height: 100px;
+            background:red;
+            position: fixed;
+            margin: auto;
+            top: 0;  bottom: 0;     /*vertially center*/
+            left: 0;right: 0;     /*horizontally center*/
+        }
+
+        #d3,#d5{
+            width: 100px;
+            height: 100px;
+            background:plum;
+        }
+
+        #d4{
+            width: 100px;
+            height: 100px;
+            background:palegreen;
+            position: relative;
+            top: 20px;
+            left: 20px;
+
+            /* with static position,margin will affect later elements */
+            /* margin-top: 20px; */
+             /*margin-left: 20px; */
+        }
+
+        #d6{
+            width: 300px;
+            height: 300px;
+            background: olivedrab;
+            position: absolute;
+            top:100px
+        }
+        #d7{
+            width: 300px;
+            height: 300px;
+            background: magenta;
+            position: relative; /*use relative has no effect to later elements*/
+        }
+        #d8{
+            width: 100px;
+            height: 100px;
+            background: indigo;
+            position: absolute;
+            bottom:30px;
+            right: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- position:
+    static:   default way, flow layout
+    fixed: having element layout relative to the window
+    relative: having element layout relative to the original location of itself,
+            it doesn't affect the later elements
+    absolute:having element layout relative to first parent element with position
+            and if there is no parent like that, then relative to body
+    -->
+    <div id="d1">bottom-right-corner</div>
+    <div id="d2">center of the screen</div>
+
+    
+
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <div id="d3"></div>
+    <div id="d4"></div>
+    <div id="d5"></div>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <div id="d6">
+        there is nothing otherside of d6,and d6 position is absolute,
+        therefore now d6 is relative to the body
+    </div>
+    <div id="d7">
+        <div id="d8"></div>
+    </div>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //3 dialogs
+        //enter 1st number
+        var firstNumber = prompt("enter 1st nunber:");
+        console.log(firstNumber,typeof firstNumber);        //string
+        
+        //enter a operator(+ - * / %)
+        var operator = prompt("enter the operator:");
+        console.log(operator,typeof operator); 
+
+        //enter 2nd number
+        var secondNumber = prompt("enter 2nd nunber:");
+        console.log(secondNumber,typeof secondNumber); 
+
+        // show the result(firgure out he format)
+        var result = firstNumber + operator + secondNumber;     //concat
+        // //              12            -            4
+        console.log(result);
+        
+        /*
+        if(operator=="+"){
+            //there is a bug, then 2 number(string) plus together, the result is concating instead of calculting
+            //suggestion:parseInt()    string,double->int
+            document.write(parseInt(firstNumber)+parseInt(secondNumber));
+        }else if(operator == "-"){
+            document.write(firstNumber-secondNumber);
+        }else if(operator == "*"){
+            document.write(firstNumber*secondNumber);
+        }else if(operator == "/"){
+            document.write(firstNumber/secondNumber);   //as long as the number format is clock, then we can do -,*,/,%directly
+            //if it refers to + , for string, it'c concating, for pure number, it's for calculation
+        }else if(operator == "%"){
+            document.write(firstNumber%secondNumber);  
+        }
+*/
+        // eval: execute the string content with the format of an equation
+        var answer = eval(result);
+        document.write(answer);  
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><br/><br/><br/><br/><br/><br/>
+    <div id="d1"
+    onclick="console.log('click')" ondblclick="console.log('double click')"
+    onmousedown="console.log('down')"  onmouseup="console.log('up')"
+    onmouseenter="console.log('enter')" onmouseleave="console.log('leave')"
+    onmousemove="moving()"
+    onmousewheel="console.log('wheel')"
+    style="width: 200px;height: 200px;background: palevioletred;"></div>
+
+    <button onclick="changeColor()">click me change the background of div</button>
+    <script>
+        var changeColor = function(){
+            // var d1 = document.getElementById("d1");
+            //change css by js
+            //xx.style.something = value;
+
+            d1.style.background = "pink";
+            d1.style.borderRadius = "100px";
+
+            // var helloWorld = 10;
+        }
+
+        function moving(){
+            // console.log("moving");
+            // inner argument object: 
+            // event: which keeps a lot of information related to the moment when you mouse moves on this div
+
+            // console.log(event.x,event.y);
+            console.log(event.offsetX,event.offsetY);
+            
+
+        }
+    </script>
+</body>
+</html>
+<!-- 
+javascript:
+1.weak type language
+2.based on object(some objects already exist,for example:event,document,window)
+
+
+
+java:object oriented language
+new
+-->

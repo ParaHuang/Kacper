@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input onkeypress="test1()" onkeydown="test2()" onkeyup="test3()" id="info1">
+    <input type="text" id="info2"  onkeydown="test4()">
+    
+    <script>
+        // onkeypress: character key pressing down
+        // onkeydown,onkeyup:every key
+    function test1(){
+        //console.log("press");
+    }
+    function test2(){
+        console.log("down",event.keyCode,event.key);
+        var code = event.keyCode;
+        if(code == 13){
+            info2.focus();
+        }
+    }
+    function test3(){
+        console.log("up");
+    }
+    function test4(){
+        console.log("down",event.keyCode,event.key);
+        var code = event.keyCode;
+        if(code == 13){
+            info1.focus();
+        }
+    }
+    </script>
+</body>
+</html>

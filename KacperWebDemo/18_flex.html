@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        main axis:
+        cross axis:
+        
+        */
+        .flex-container{
+            background-color: antiquewhite;
+            height: 100px;
+            display: flex;
+        }
+
+        #example1{
+            /* defaulty flex-start */
+            /* justify-content: flex-start; */
+        }
+
+        #example2{
+            justify-content: center;
+        }
+
+        #example3{
+            justify-content: flex-end;
+        }
+
+        #example4{
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        #example5{
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        #example6{
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #example7{
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        #example8{
+            justify-content: flex-start;
+            align-items: flex-end;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+    flex layout:a way to set up the layout of inner items 
+     main axis:director, from left to right,    or top bottom
+
+     justify-content:   main axis align , values are flex-start,center,flex-end,space-between,space-around,space-evenly
+     algin-items:       cross axis align, values are strentch,flex-start,flex-end,center
+    -->
+     <h1>
+        default look of flex layout:
+        main axis: horizontal , cross axis: vertial
+     </h1>
+     <div class="flex-container" id="example1">
+        <button>button 1</button>
+        <button>button 2</button>
+        <button>button 3</button>
+     </div>
+     <h1>
+        flex layout:
+        main axis: horizontal , align center
+        cross axis: vertial
+     </h1>
+     <div class="flex-container" id="example2">
+        <button>button 1</button>
+        <button>button 2</button>
+        <button>button 3</button>
+     </div>
+
+     <h1>
+        flex layout:
+        main axis: horizontal , align right
+        cross axis: vertial
+     </h1>
+     <div class="flex-container" id="example3">
+        <button>button 1</button>
+        <button>button 2</button>
+        <button>button 3</button>
+     </div>
+
+     <h1>
+        flex layout:
+        main axis: horizontal , align right
+        cross axis: vertial , align top
+     </h1>
+     <div class="flex-container" id="example4">
+        <button>button 1</button>
+        <button>button 2</button>
+        <button>button 3</button>
+     </div>
+
+     <h1>
+        flex layout:
+        main axis: horizontal , align right
+        cross axis: vertial , align top
+     </h1>
+     <div class="flex-container" id="example5">
+        <button>button 1</button>
+        <button>button 2</button>
+        <button>button 3</button>
+     </div>
+
+     <h1>
+        flex layout:
+        main axis: horizontal , align->two side ones sticky to the border, the middles ones split the inner space
+        cross axis: vertial , align center
+     </h1>
+     <div class="flex-container" id="example6">
+        <button>button 1</button>
+        <button>button 2</button>
+        <button>button 3</button>
+        <button>button 4</button>
+        <button>button 5</button>
+     </div>
+
+     <h1>
+        flex layout:
+        main axis: horizontal , align->5 buttons evenly split the space
+        cross axis: vertial , align center
+     </h1>
+     <div class="flex-container" id="example7">
+        <button>button 1</button>
+        <button>button 2</button>
+        <button>button 3</button>
+        <button>button 4</button>
+        <button>button 5</button>
+     </div>
+
+     <h1>
+        flex layout:
+        main axis: horizontal , align->algin left
+        cross axis: vertial , align bottom
+     </h1>
+     <div class="flex-container" id="example8">
+        <button>button 1</button>
+        <button>button 2</button>
+        <button>button 3</button>
+     </div>
+</body>
+</html>
