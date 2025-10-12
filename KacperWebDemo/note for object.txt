@@ -1,0 +1,29 @@
+javascript: based on object
+
+1.window
+                    window
+     |----------------|------------------|               
+  location           document           history
+
+functions of window(we can emit window.):
+window.alert("content");
+var option = window.confirm("content");
+var str = window.prompt("content");
+var intNumber = parseInt(content);          //change str/decimal content into interger number,if the content is not in number format, then the result is NaN
+var floatNumber = parseFloat(content);
+var result = isNaN(content);
+
+setInterval(function,time);     //unit of time is milli second
+setInterval("function()",time);
+
+NaN:not a number
+
+2.document
+
+
+
+
+3. create object by ourself             var obj = new Xxxx();
+a.  Array
+b.  Object
+c.  Date

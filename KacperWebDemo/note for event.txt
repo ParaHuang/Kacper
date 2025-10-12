@@ -1,0 +1,23 @@
+Event:
+
+mouse:
+onclick
+ondbclick           db->double
+onmousedown
+onmouseup
+onmouseenter
+onmouseleave
+onmousemove
+onmousewheel
+
+key:
+onkeydown
+onkeyup
+onkeypress
+
+others:
+onload
+onblur          losing focus
+onfocus
+onsubmit    
+onchange        when selecting differnt options

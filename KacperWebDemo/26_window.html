@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- value only works for form element(input,select,textare) -->
+    <!-- <input id="number"> -->
+    <h1 id="number">  </h1>
+    <select id="color" onchange="changeColor()">
+        <option>red</option>
+        <option>yellow</option>
+        <option>blue</option>
+        <option>green</option>
+    </select>
+    <script>
+        function changeColor() {
+            document.bgColor = color.value;
+        }
+
+        console.log(parseInt("hello"));
+        console.log(isNaN("10"));
+
+        function print() {
+            console.log("hello");
+        }
+
+        var i = 0;
+        function count() {
+            i++;
+            // console.log(i);
+            // number.innerText = i;
+            number.innerHTML = "<a href='http://www.baidu.com'>"+i+"</a>";
+
+            //value ->  input
+            //innerText
+            //innerHTML
+        }
+        // setInterval("count(0)",1000);   //ask setInterval call count(0) every second
+        setInterval(count, 1000);
+
+        // for(var i=1 ; i<=100 ; i++){
+        //     print();
+        // }
+        //print hello every second
+
+        //no need to pass parameter
+        //setInterval(print,1000);    //setInterval will call print by itself
+        //when we need to pass data to the function
+        // setInterval("print('hey')",1000);
+
+        //a function with () , it's being called immediately
+
+        var now = new Date();
+        console.log(now);
+        console.log(now.getFullYear());
+
+        var second = now.getSeconds();
+
+        //  A  ? B : C
+        //if A is true, then execute B , otherwise execute C
+        second =    second>9    ?    second :   ("0"+second)     ;
+        
+        
+
+        console.log("hello"+10+2);  //"hello10"+2->hello102
+        console.log(10+2+"hello");  //12+"hello"->12hello
+        console.log("hello"+(10+2));  //"hello"+12->hello12
+        
+        //mm/dd/yyyy
+    </script>
+</body>
+
+</html>
