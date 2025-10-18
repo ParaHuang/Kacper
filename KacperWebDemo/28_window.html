@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        //when the page is loading, it will pre load all the declaration of variables and functions
+        //which means it'll fully load the definition of function, but only loads the declare of variable without initialize (load var x;)
+        printHello();
+        function printHello(){
+            console.log("hello"); 
+        }
+        printHello();
+
+        //define a function as a variable
+        //when page is loading, it's only load "var a "
+        //after a long while, when you firstly call this method, then it load the definition part
+        //a();      //wrong
+        // var a = function(){
+        //     console.log("hello");
+        // };
+        // a();
+        
+        setInterval(function(){
+            console.log("hello");
+        },1000);
+
+
+
+        console.log(x);             //not wrong, just the value of x is not define
+        // console.log(y);          //certainly wrong,syntax error, because there is no y
+        
+        var x = 10;
+        // console.log(x);
+        
+        var z;
+        console.log(z);
+        
+
+        // printHello();
+
+        // setTimeout(printHello,2000);
+        // setInterval(printHello,1000);
+    </script>
+</body>
+</html>

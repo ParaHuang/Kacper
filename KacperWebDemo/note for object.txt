@@ -1,4 +1,6 @@
 javascript: based on object
+//BOM: browser object module
+//DOM: document object module , we consider every label as a node object
 
 1.window
                     window
@@ -15,15 +17,50 @@ var result = isNaN(content);
 
 setInterval(function,time);     //unit of time is milli second
 setInterval("function()",time);
+clearInterval(variableOfInterval);
+
+setTimeout(function,waitingTime); //count down function,execute for 1 time
 
 NaN:not a number
 
-2.document
+3.location
+location.href = newAddress ; //change current url
+location.reload();          //refresh the current page
+
+
+4.history
+history.back();
+history.forward();
+history.go(number);   //position number makes it go forward
 
 
 
 
-3. create object by ourself             var obj = new Xxxx();
+5.document
+A.get node
+var node = document.getElementById("idValue");
+var nodes = document.getElementsByTagName("tag");
+
+
+
+
+B.create node
+var node = document.createElement("tag");
+
+C.modify node
+node.attribute = value;         //node.innerText = "hello";
+node.style.property = value;    //node.style.color = "red";
+
+D.add node
+parentNode.appendChild(node);
+parentNode.insertBefore(node,childNode);      //insert into before a childNode
+
+E.delete node
+node.remove();
+
+
+
+6. create object by ourself             var obj = new Xxxx();
 a.  Array
 b.  Object
 c.  Date

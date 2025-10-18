@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="d1">div1</div>
+    <div>div2</div>
+    <div class="c1">div3</div>
+    <div class="c1">div4</div>
+    <div>div5</div>
+    <p class="c1">paragrash</p>
+    <script>
+        var d1 = document.getElementById("d1");
+        console.log(d1);
+        
+        var nodes = document.getElementsByTagName("div");       //array of div
+        console.log(nodes);
+        
+        
+        for(var i=0 ; i<nodes.length ; i++){
+            nodes[i].style.color = "red";
+        }
+
+        var nodes2 = document.getElementsByClassName("c1");
+
+        for(var i=0 ; i<nodes2.length ; i++){
+            nodes2[i].style.background = "yellow";
+        }
+    </script>
+</body>
+</html>

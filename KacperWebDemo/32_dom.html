@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="fruit" type="text" placeholder="enter the fruit">
+    <input id="color" type="text" placeholder="enter the color">
+    <button onclick="add()">add fruit</button>
+    <button onclick="removeFruit()">remove last fruit</button>
+    <ul id="fruitList">
+        <li id="l1">apple</li>
+        <li id="l2">orange</li>
+        <li>watermelon</li>
+        <!-- <li>banana</li> -->
+    </ul>
+
+    <script>
+        var add = function(){
+            //create a new node
+            var node = document.createElement("li");
+            //set the text of new node
+            node.innerText = fruit.value;
+            node.style.color = color.value;
+            console.log(node);
+            //add node into a parent node
+            // fruitList.appendChild(node);
+            // fruitList.insertBefore(node,fruitList.firstChild);      //add in the top
+            fruitList.insertBefore(node,fruitList.childNodes[0]);
+
+            //node object
+            // includs all nodes (tag node,text node,comment node)
+            //firstChild,lastChild
+            //childNodes[0]
+            // tag node
+            //firstElementChild,lastElementChild
+
+            fruit.value = "";
+            color.value = "";
+
+            console.log(fruitList.childNodes);
+            
+        };
+
+        var removeFruit = function(){
+            console.log(fruitList.childNodes);
+            //l1.remove();
+            fruitList.lastElementChild.remove();
+        }
+    </script>
+</body>
+</html>

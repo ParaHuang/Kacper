@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>go to baidu after <span id="time">5</span> second</h1>
+    <button onclick="start()">start</button>
+    <script>
+        var i = -1;
+        var countDown = function(){
+            time.innerText = i;
+            i--;
+            if(i==-1){
+                clearInterval(cycle);
+                location.href = "30_location_history.html";
+            }
+        }
+
+        var cycle;
+        var start = function(){
+            if(i == -1){
+                i = 5;
+                cycle = setInterval(countDown,100);
+            }
+        }
+
+        //bug:when 1 count down is in the middle way, I click start again
+        //then everything is messed up
+    </script>
+</body>
+</html>
