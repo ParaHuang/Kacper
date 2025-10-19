@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //by constructor
+        var arr1 = new Array(); //create an empty array
+        var arr2 = new Array(3);    //create an array, also declare the length
+        var arr3 = new Array(23, 12, 90); //create an array with initial values
+        var arr4 = new Array('hello');  //create an array with initial values
+
+        //by literal value
+        var arr5 = [];          //an empty array
+        var arr6 = [25];         //with initial values
+        var arr7 = ['hello', 23, 11, true, 25];         //with initial values
+
+        console.log('array:-------------------');
+        console.log(arr1);
+        console.log(arr2);
+        console.log(arr3);
+        console.log(arr4);
+        console.log(arr5);
+        console.log(arr6);
+        console.log(arr7);
+
+        // console.log('index 0:-------------------');
+
+
+        // console.log(arr1[0]);       //undefined, because there is no element inside array
+        // console.log(arr2[0]);       //undefined, because there is 3 position inside array,but it's empty for every position
+        // console.log(arr3[0]);       //23
+        // console.log(arr4[0]);       //hello
+        // console.log(arr5[0]);       //undefined, because there is no element inside array
+        // console.log(arr6[0]);       //25
+        // console.log(arr7[0]);
+
+        console.log('array after push an element:-------------------');
+        arr1.push("new element");
+        arr2.push("new element");
+        arr3.push("new element");
+        arr4.push("new element");
+        arr5.push("new element");
+        arr6.push("new element");
+        arr7.push("new element");
+        console.log(arr1);
+        console.log(arr2);
+        console.log(arr3);
+        console.log(arr4);
+        console.log(arr5);
+        console.log(arr6);
+        console.log(arr7);
+
+        console.log('array after change index 0:-------------------');
+        //access element by arrName[index]
+        arr1[0] = 'something else';
+        arr2[0] = 'something else';
+        arr3[0] = 'something else';
+        arr4[0] = 'something else';
+        arr5[0] = 'something else';
+        arr6[0] = 'something else';
+        arr7[0] = 'something else';
+        console.log(arr1);
+        console.log(arr2);
+        console.log(arr3);
+        console.log(arr4);
+        console.log(arr5);
+        console.log(arr6);
+        console.log(arr7);
+
+    </script>
+</body>
+
+</html>

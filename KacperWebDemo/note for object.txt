@@ -61,6 +61,6 @@ node.remove();
 
 
 6. create object by ourself             var obj = new Xxxx();
-a.  Array
-b.  Object
+a.  Array       []
+b.  Object      {}
 c.  Date

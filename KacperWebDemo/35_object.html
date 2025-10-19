@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var obj1 = new Object();    //empty object
+        //access value of object by attribute
+        //obj.attribute = value;
+        obj1.number = 1002; //attribute doesn't exist, then create, otherwise replace
+        //obj['attribute'] = value;
+        obj1['name'] = 'Lucy';
+
+        console.log(obj1);
+        /*
+        var obj = {
+            attribute1:value1,
+            attribute2:value2,
+            attribute3:value3
+        };
+        */
+        var obj2 = {
+            number:1001,
+            name:'Jack',
+            age:18,
+            gender:'male'
+        };
+        obj2.number = 1010;
+        console.log(obj2);
+        
+        //use for loop to operate object
+        for(var x in obj2){ //x is attribute 1 by 1
+            console.log(x,'---',obj2[x]);
+            
+        }
+
+    </script>
+</body>
+</html>

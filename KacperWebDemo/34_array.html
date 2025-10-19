@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="colorfulRainBow">
+
+    </div>
+    <script>
+        var arr = ['red','orange','yellow','green','cyan','blue','purple'];
+
+        /*  
+        //for...i...    (we want to operate index)
+        for(var i = arr.length-1 ; i>=0 ; i--){
+            var rainbow = document.createElement("div");
+            rainbow.style.background = arr[i];
+            rainbow.style.height = "40px";
+            colorfulRainBow.appendChild(rainbow);
+            arr[i] = 0;     //this will affect array
+        }
+      */
+
+      /*
+        // for...of...  (you only care about value)
+        for(var x of arr){  //x is every value of array 1 by 1
+            console.log(x);
+            var rainbow = document.createElement("div");
+            rainbow.style.background = x;
+            rainbow.style.height = "40px";
+            colorfulRainBow.appendChild(rainbow);
+            x = 0;      //this has no effect on array
+        }
+        console.log(arr);
+        */
+
+        console.log(arr);
+        
+        // for...in...  (when you need value and index)
+        for(var x in arr){
+            console.log(x);
+            var rainbow = document.createElement("div");
+            rainbow.style.background = arr[x];
+            rainbow.style.height = "40px";
+            colorfulRainBow.appendChild(rainbow);
+            // arr[x] = 0; //this will affect array
+        }
+        console.log(arr);
+
+        //delete element from array
+        //param 1: delete from where    param 2:delete how many
+        arr.splice(0,1);
+        console.log(arr);
+    </script>
+</body>
+</html>
