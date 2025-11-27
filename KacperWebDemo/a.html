@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <h1 id="p1">犀鸟</h1>
+        <img id="pic" width="100%" src="img/20240915152801.png" />
+        <div id="p2">画的不错</div>
+    </div>
+    <script>
+        pic.onmouseenter = function () {
+            p1.style.color = "red";
+            p2.style.background = "yellow";
+            pic.style.border = "5px solid gray";
+        }
+        pic.onmouseleave = function () {
+            p1.style.color = "black";
+            p2.style.background = "";
+            pic.style.border = "0";
+        }
+    </script>
+</body>
+
+</html>
