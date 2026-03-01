@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-4.0.0.min.js"></script>
+    <style>
+        #tip {
+            color: red;
+            display: none;
+            /*show it, use inline*/
+        }
+    </style>
+</head>
+
+<body>
+
+    Username:<input id="username" /><br />
+    Password:<input id="password" /><br />
+    <button id="loginBtn">Login</button>
+    <span id="tip">invalid username or password</span>
+
+    <script>
+        //when you click the button , username-admin,password-123,success(dialog)
+        //otherwise, fail(display tip)
+        $("#loginBtn").click(function () {
+            var v1 = $("#username").val();
+            var v2 = $("#password").val();
+
+            var obj = {
+                username:v1,
+                password:v2
+            };
+
+            /*
+            $.ajax({
+                url:"http://localhost:8080/restaurant/user/signin",
+                type:"POST",
+                data:obj,
+                success:function(data){
+                    console.log("the response is:");
+                    console.log(data);
+                },
+                error:function(data){
+                    console.log("error---",data);
+                }
+            });
+            */
+
+            // $.post(url,data,function,dataType);
+            $.post("http://localhost:8080/restaurant/user/signin",obj,function(data){
+                console.log("the response is:");
+                console.log(data);
+            });
+
+            /*
+            $.ajax({
+                url:"xxx",          //✅the address of server you want to request
+                type:"POST",        //✅request method
+                data:xxx,           //request body, which is the data you want to submit
+                dataType: "json",   //response type,defautly is text
+                success:function(data){ //✅the event when it reponse successfully, data is the response body
+                    // define the thing you want to do
+                },
+                error:function(data){//the event when it doesn't reponse successfully
+                    // define the thing you want to do
+                }
+            });
+            */
+        });
+    </script>
+
+<!-- {
+                url: "api/data.json",
+                type: "GET",
+                dataType: "json",
+                success: function (data) {
+                    console.log(data); // 处理返回数据
+                }
+            } -->
+
+
+
+
+
+
+    <!-- <div id="d1">click the button, change background</div>
+    <button id="btn1">click me</button> 
+
+    <script>
+        // $("selector").action(params);
+        // $.action(params);
+
+        $("#btn1").click(function(){
+            $("#d1").css("background","red");
+        });
+    </script>
+    -->
+</body>
+
+</html>

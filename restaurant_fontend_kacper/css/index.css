@@ -1,0 +1,31 @@
+#container{
+    width: 1024px;
+    margin: 20px auto;
+    border: 1px gray solid;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.item{
+    border: 1px paleturquoise solid;
+    border-radius: 20px;
+    margin: 20px;
+    padding: 20px;
+    display: inline-block;
+}
+
+.name{
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.price{
+    font-size: 26px;
+    font-weight: bold;
+    color: red;
+}
+
+.image{
+    width: 150px;
+    border-radius: 20px;
+}

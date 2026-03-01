@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css"/>
+</head>
+<body>
+    <div id="container">
+        
+    </div>
+
+    <script src="js/jquery-4.0.0.min.js"></script>
+    <script>
+        $.get("http://localhost:8080/restaurant/food?cate_id=2",function(responseContent){
+            if(responseContent.code == 200){
+                //analysis the data part
+                // console.log(responseContent.data);
+
+                $.each(responseContent.data,function(index,value){
+                    //format string
+                    var str = `
+                        <div class="item">
+                            Name:<span class="name">${value.food_name}</span><br/>
+                            Price:<span class="price">${value.price}</span><br/>
+                            Description:<span class="description">${value.description}</span><br/>
+                            <img class="image" src="img/20231015203159.png"/><br/>
+                            <button>buy</button>
+                        </div>
+                    `;
+                    $("#container").append(str);
+                })
+
+
+
+                // var arr = [true,11,44,'hello',99];
+                // $.each(whatArr,whatToDoForEachValue);
+                // $.each(arr,function(a,b){
+                //     console.log('abc',a,b);
+                // })
+            }
+        });
+
+    </script>
+</body>
+</html>

@@ -12,6 +12,7 @@ public class Test4 {
 
 //        int result1 = dao.addStudent();
 //        System.out.println(result1>0?"successfully":"error");
+
         System.out.println("which student do you want to delete?");
         String id = scanner.nextLine();
         int result2 = dao.deleteStudent(id);

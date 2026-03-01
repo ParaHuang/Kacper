@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn1">get</button>
+    <button id="btn2">post</button>
+    <button id="btn3">patch</button>
+    <script src="js/jquery-4.0.0.min.js"></script>
+    <script>
+        const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGFpbXMiOnsidXNlcm5hbWUiOiJqb29vb2pvIn0sImV4cCI6MTc3MjQxMTI0MX0.dz8xVXcX6pU8vQsIciALQmMgLUmDQ5tA-APQe8lS4rc"
+            
+        // 假设你的token存储在localStorage中
+        // const token = localStorage.getItem('token');
+        $("#btn1").click(function () {
+            // GET请求示例
+           $.ajax({
+                url: 'http://localhost:8080/restaurant/user',
+                type: 'GET',
+                headers: {'Authorization': token},
+                xhrFields: {withCredentials: true},
+                success: function() { console.log('GET成功'); }
+            });
+        })
+
+        $("#btn2").click(function () {
+            $.ajax({
+                url: 'http://localhost:8080/restaurant/user',
+                type: 'POST',
+                data: JSON.stringify({
+                    name: '张三',
+                    email: 'zhangsan@example.com'
+                }),
+                contentType: 'application/json',
+                headers: {
+                    'Authorization': token  // 在请求头中添加Token
+                },
+                success: function (response) {
+                    console.log('请求成功：', response);
+                },
+                error: function (xhr, status, error) {
+                    console.error('请求失败：', error);
+                }
+            });
+        })
+
+
+        $("#btn3").click(function () {
+            $.ajax({
+                url: 'http://localhost:8080/restaurant/user',
+                type: 'PATCH',
+                dataType: 'json',
+                // 跨域相关配置
+                crossDomain: true,
+                xhrFields: {
+                    withCredentials: true  // 允许携带跨域凭证（如cookies）
+                },
+                // 设置请求头，携带token
+                headers: {
+                    'Authorization': token,
+                    // 'Content-Type': 'application/json'
+                },
+                success: function (response) {
+                    console.log('GET请求成功:', response);
+                },
+                error: function (xhr, status, error) {
+                    console.error('GET请求失败:', error);
+                }
+            });
+        })
+
+
+
+
+
+        // // 如果API支持JSONP
+        // $.ajax({
+        //     url: 'http://localhost:8080/restaurant/user',
+        //     type: 'GET',
+        //     dataType: 'jsonp',  // 使用JSONP
+        //     headers: {
+        //         'Authorization': localStorage.getItem('token')
+        //     },
+        //     success: function (response) {
+        //         console.log('跨域请求成功：', response);
+        //     },
+        //     error: function (xhr, status, error) {
+        //         console.error('跨域请求失败：', error);
+        //     }
+        // });
+
+
+  
+
+        // GET请求示例
+
+    </script>
+</body>
+
+</html>
